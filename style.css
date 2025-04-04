@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77, #0d1b2a); /* Colores espaciales */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estrellas animadas */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 200px 200px, 150px 150px, 100px 100px;
+  background-position: 0 0, 50px 100px, 100px 50px;
+  animation: parpadear 6s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animación de parpadeo */
+@keyframes parpadear {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+body {
+    background-color: lightblue; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Fondo espacial */
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77, #0d1b2a);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Estrellas */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 200px 200px, 150px 150px, 100px 100px;
+  background-position: 0 0, 50px 100px, 100px 50px;
+  animation: parpadear 6s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animación de parpadeo */
+@keyframes parpadear {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Contenedor principal que empuja el footer */
+.contenido {
+  flex: 1;
+  z-index: 2;
+  position: relative;
+  padding: 40px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre enlaces */
+  margin: 20px 0;
+  z-index: 2;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+
+/* Footer que se funde con el fondo */
+footer {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(13, 27, 42, 0.4);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 2;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+}
+footer {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(13, 27, 42, 0.4); 
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  z-index: 2;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+}
+
